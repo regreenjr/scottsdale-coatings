@@ -5,7 +5,9 @@ Marketing site for **Scottsdale Coatings** — premium one-day polyaspartic flak
 Single-file static site (`index.html`) — no build step, no dependencies. Procedurally-generated flake-floor textures (SVG), interactive flake-color picker, instant price estimator, and quote form.
 
 ## Deploy
-Static site. Vercel serves `index.html` at the root automatically — no configuration required.
+Static site. Vercel serves `index.html` at the root automatically — no build/config required. Pushes to `main` auto-deploy.
+
+`www.scottsdalecoatings.com` → 308 redirect to the apex `scottsdalecoatings.com`. This is configured at the **Vercel project domain level** (Project → Domains → "Redirect to"), not in this repo.
 
 ## Before launch (placeholders to swap)
 - Phone `(480) 555-0147` (placeholder), `hello@scottsdalecoatings.com`, license `ROC #000000`
