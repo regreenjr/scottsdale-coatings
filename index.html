@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scottsdale Coatings — Garage Floor Coatings in Scottsdale, AZ</title>
+<meta name="description" content="Premium polyaspartic flake garage floor coatings in Scottsdale, AZ. One-day install, UV-stable for the desert sun, all-inclusive $8/sq ft. Serving Scottsdale, Paradise Valley & the East Valley.">
+<meta property="og:title" content="Scottsdale Coatings — Showroom Floors, Desert-Proof">
+<meta property="og:description" content="Premium one-day flake garage floors. UV-stable polyaspartic. All-inclusive $8/sq ft.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --obsidian:#17110D; --espresso:#221911; --bark:#33261B; --bark-2:#42332450;
+    --bone:#F2EAD9; --bone-2:#E7DAC3; --sand:#D8C7A8;
+    --clay:#C45D34; --clay-d:#A4471F; --clay-l:#E08A5C;
+    --ember:#E89A4B; --brass:#CBA258; --brass-l:#E4C886;
+    --dusk:#7C8AA0; --olive:#8A8A5C;
+    --t-bone:#F2EAD9; --t-mut:#B7A88E; --t-dim:#8A7B64;
+    --t-ink:#241910; --t-ink-mut:#6E5C46;
+    --line:#3A2C1F; --line-l:#D8C7A8;
+    --display:'Fraunces',Georgia,'Times New Roman',serif;
+    --body:'Hanken Grotesk',system-ui,-apple-system,sans-serif;
+    --mono:'Spline Sans Mono',ui-monospace,Menlo,monospace;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  body{font-family:var(--body);background:var(--obsidian);color:var(--t-bone);line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.0;letter-spacing:-.015em}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--clay);color:var(--bone)}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 30px}
+  section{position:relative}
+
+  .eyebrow{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--clay-l)}
+  .num-tag{font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--t-dim)}
+
+  /* buttons */
+  .btn{position:relative;display:inline-flex;align-items:center;gap:11px;font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding:16px 28px;border-radius:2px;cursor:pointer;border:1px solid transparent;transition:.3s var(--ease);overflow:hidden;white-space:nowrap}
+  .btn .arr{transition:transform .3s var(--ease)}
+  .btn:hover .arr{transform:translateX(4px)}
+  .btn.solid{background:var(--clay);color:var(--bone)}
+  .btn.solid:hover{background:var(--clay-d)}
+  .btn.line{background:transparent;border-color:rgba(203,162,88,.45);color:var(--brass-l)}
+  .btn.line:hover{border-color:var(--brass);background:rgba(203,162,88,.08)}
+  .btn.ink{background:var(--obsidian);color:var(--bone)}
+  .btn.ink:hover{background:var(--espresso)}
+
+  /* realistic clear-coat sheen on textured surfaces */
+  .coat{position:relative;background-repeat:repeat;background-position:center}
+  .coat::after{content:"";position:absolute;inset:0;background:
+    linear-gradient(118deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,.02) 24%, rgba(255,255,255,0) 52%, rgba(255,255,255,.03) 78%, rgba(255,255,255,.11) 100%),
+    radial-gradient(130% 90% at 28% 8%, rgba(255,255,255,.22), rgba(255,255,255,0) 42%);
+    pointer-events:none;mix-blend-mode:screen}
+  .coat.vig::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 120% at 50% 50%, transparent 55%, rgba(0,0,0,.4));pointer-events:none;z-index:1}
+
+  /* film grain overlay */
+  .grain{position:fixed;inset:0;z-index:300;pointer-events:none;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    animation:grain 6s steps(5) infinite}
+  @keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-6%,4%)}40%{transform:translate(4%,-5%)}60%{transform:translate(-3%,3%)}80%{transform:translate(5%,2%)}100%{transform:translate(0,0)}}
+
+  /* reveal on scroll */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
+
+  /* ============ HEADER ============ */
+  header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.4s var(--ease)}
+  header.scrolled{background:rgba(23,17,13,.82);backdrop-filter:blur(14px) saturate(1.3);border-bottom:1px solid rgba(203,162,88,.16)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:80px}
+  .brand{display:flex;align-items:center;gap:13px}
+  .mark{width:34px;height:34px;flex:none;position:relative;transform:rotate(45deg);border:1.5px solid var(--brass);border-radius:3px}
+  .mark::after{content:"";position:absolute;inset:7px;background:var(--clay);border-radius:2px}
+  .brand .wm{font-family:var(--display);font-weight:600;font-size:20px;letter-spacing:-.01em;color:var(--bone);line-height:1}
+  .brand .wm small{display:block;font-family:var(--mono);font-size:9px;font-weight:400;letter-spacing:.34em;color:var(--brass);margin-top:3px}
+  .navlinks{display:flex;gap:34px;align-items:center}
+  .navlinks a{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--t-mut);position:relative;padding:4px 0;transition:.25s}
+  .navlinks a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--clay-l);transition:width .3s var(--ease)}
+  .navlinks a:hover{color:var(--bone)}.navlinks a:hover::after{width:100%}
+  .navcta{display:flex;align-items:center;gap:20px}
+  .navphone{font-family:var(--display);font-weight:600;font-size:18px;color:var(--bone);display:flex;align-items:center;gap:8px;transition:.25s}
+  .navphone:hover{color:var(--brass-l)}
+  .navphone svg{fill:var(--clay-l)}
+  .burger{display:none;flex-direction:column;gap:6px;background:none;border:0;cursor:pointer;padding:8px}
+  .burger span{width:26px;height:2px;background:var(--bone);transition:.3s}
+  .mobile{position:fixed;inset:80px 0 auto 0;z-index:99;background:var(--espresso);border-bottom:1px solid var(--line);transform:translateY(-120%);transition:transform .4s var(--ease)}
+  .mobile.open{transform:none}
+  .mobile a{display:block;padding:17px 30px;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--t-mut);border-bottom:1px solid var(--line)}
+
+  /* ============ HERO ============ */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 0;overflow:hidden;
+    background:radial-gradient(120% 80% at 70% 12%, #4a2f1a 0%, #2c1d12 34%, var(--obsidian) 66%)}
+  .sky-glow{position:absolute;top:-10%;left:50%;transform:translateX(-50%);width:120%;height:60%;
+    background:radial-gradient(60% 70% at 50% 40%, rgba(232,154,75,.34), rgba(196,93,52,.12) 45%, transparent 70%);
+    filter:blur(8px);pointer-events:none}
+  .floor-stage{position:absolute;bottom:0;left:0;right:0;height:62%;perspective:760px;perspective-origin:50% 0;z-index:1;pointer-events:none}
+  .slab{position:absolute;bottom:0;left:-25%;right:-25%;height:200%;transform:rotateX(64deg);transform-origin:bottom center;
+    background-color:#7c7f84;background-size:300px 300px;box-shadow:0 -40px 120px rgba(0,0,0,.4) inset}
+  .slab::after{content:"";position:absolute;inset:0;background:
+    linear-gradient(0deg, rgba(23,17,13,0) 30%, rgba(23,17,13,.55) 70%, var(--obsidian) 100%),
+    radial-gradient(60% 50% at 50% 0%, rgba(232,154,75,.18), transparent 60%)}
+  .sheen{position:absolute;inset:0;background:linear-gradient(100deg, transparent 30%, rgba(255,255,255,.10) 48%, rgba(255,255,255,.18) 50%, rgba(255,255,255,.06) 54%, transparent 70%);
+    transform:translateX(-30%);animation:sheen 7s var(--ease) infinite;z-index:2}
+  @keyframes sheen{0%,100%{transform:translateX(-40%)}50%{transform:translateX(40%)}}
+
+  .hero::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;
+    background:linear-gradient(92deg, rgba(20,14,10,.9) 0%, rgba(20,14,10,.58) 34%, rgba(20,14,10,.14) 60%, transparent 80%),
+               linear-gradient(0deg, rgba(20,14,10,.74) 0%, rgba(20,14,10,.1) 38%, transparent 50%)}
+  .hero-inner{position:relative;z-index:5;width:100%}
+  .hero-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+  .hero-eyebrow::before{content:"";width:46px;height:1px;background:var(--brass)}
+  .hero h1{font-size:clamp(54px,10.5vw,128px);font-weight:600;letter-spacing:-.03em;line-height:.92;color:var(--bone);max-width:14ch}
+  .hero h1 em{font-style:italic;font-weight:500;color:var(--clay-l)}
+  .hero h1 .ln{display:block;overflow:hidden}
+  .hero h1 .ln i{display:block;font-style:normal;transform:translateY(110%);animation:rise 1s var(--ease) forwards}
+  .hero h1 .ln:nth-child(2) i{animation-delay:.12s}
+  .hero h1 .ln:nth-child(3) i{animation-delay:.24s}
+  @keyframes rise{to{transform:none}}
+  .hero-sub{max-width:512px;font-size:18px;font-weight:500;color:#EADEC8;text-shadow:0 1px 18px rgba(15,10,7,.9);margin:30px 0 38px;opacity:0;animation:fade 1s var(--ease) .5s forwards}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:fade 1s var(--ease) .65s forwards}
+  @keyframes fade{to{opacity:1}}
+  .hero-price{position:absolute;right:0;top:27%;z-index:6;text-align:right;opacity:0;animation:fade 1s var(--ease) .8s forwards;text-shadow:0 2px 26px rgba(15,10,7,.85)}
+  .hero-price .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--sand)}
+  .hero-price .v{font-family:var(--display);font-weight:600;font-size:clamp(64px,9vw,108px);line-height:.8;color:var(--brass-l)}
+  .hero-price .v sup{font-size:.32em;vertical-align:top;color:var(--clay-l)}
+  .hero-price .u{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--bone-2)}
+  .scrollcue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:6;font-family:var(--mono);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--t-dim);display:flex;flex-direction:column;align-items:center;gap:10px}
+  .scrollcue::after{content:"";width:1px;height:42px;background:linear-gradient(var(--brass),transparent);animation:cue 2s var(--ease) infinite}
+  @keyframes cue{0%{opacity:0;transform:scaleY(.3);transform-origin:top}50%{opacity:1}100%{opacity:0;transform:scaleY(1);transform-origin:bottom}}
+
+  /* ============ MARQUEE ============ */
+  .marquee{background:var(--clay);color:var(--bone);padding:18px 0;overflow:hidden;border-top:1px solid var(--clay-d);border-bottom:1px solid var(--clay-d)}
+  .mtrack{display:flex;gap:0;white-space:nowrap;width:max-content;animation:scrollx 34s linear infinite}
+  .marquee:hover .mtrack{animation-play-state:paused}
+  .mtrack span{font-family:var(--display);font-style:italic;font-weight:500;font-size:22px;padding:0 28px;display:flex;align-items:center;gap:28px;opacity:.96}
+  .mtrack span::after{content:"✦";font-style:normal;font-size:13px;color:var(--brass-l)}
+  @keyframes scrollx{to{transform:translateX(-50%)}}
+
+  /* ============ STATS ============ */
+  .stats{background:var(--espresso);border-bottom:1px solid var(--line)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+  .stat{padding:48px 28px;border-right:1px solid var(--line);text-align:center}
+  .stat:last-child{border-right:none}
+  .stat .n{font-family:var(--display);font-weight:600;font-size:62px;line-height:.9;color:var(--brass-l)}
+  .stat .n small{font-size:.4em;color:var(--clay-l)}
+  .stat .l{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--t-mut);margin-top:12px}
+
+  /* section header */
+  .shead{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:56px;flex-wrap:wrap}
+  .shead .l{max-width:660px}
+  .shead h2{font-size:clamp(34px,5.4vw,62px);margin:16px 0 0;letter-spacing:-.025em}
+  .shead h2 em{font-style:italic;color:var(--clay)}
+  .shead .desc{font-size:17px;color:var(--t-ink-mut);margin-top:18px;max-width:540px}
+  .on-dark .shead .desc{color:var(--t-mut)}
+
+  /* light section base */
+  .light{background:var(--bone);color:var(--t-ink)}
+  .light .eyebrow{color:var(--clay-d)}
+  .pad{padding:120px 0}
+
+  /* ============ SERVICES ============ */
+  .svc-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+  .svc{position:relative;border-radius:6px;overflow:hidden;background:var(--espresso);min-height:340px;display:flex;flex-direction:column;justify-content:flex-end;border:1px solid var(--line-l);transition:.5s var(--ease)}
+  .svc .tex{position:absolute;inset:0;background-size:300px 300px;transition:transform .8s var(--ease)}
+  .svc:hover .tex{transform:scale(1.08)}
+  .svc .shade{position:absolute;inset:0;background:linear-gradient(0deg, rgba(23,17,13,.92) 8%, rgba(23,17,13,.4) 45%, rgba(23,17,13,.15) 100%);z-index:1}
+  .svc .c{position:relative;z-index:2;padding:28px}
+  .svc h3{font-size:27px;color:var(--bone)}
+  .svc p{font-size:14.5px;color:var(--t-mut);margin-top:8px;max-width:34ch}
+  .svc .ix{position:absolute;top:22px;left:24px;z-index:2;font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--brass-l)}
+  .svc.feat{grid-column:span 6}
+  .svc.half{grid-column:span 6}
+  .svc.third{grid-column:span 4}
+
+  /* ============ PROCESS ============ */
+  .process{background:var(--obsidian);overflow:hidden}
+  .contour{position:absolute;inset:0;opacity:.5;pointer-events:none;
+    background-image:repeating-radial-gradient(circle at 78% 30%, transparent 0, transparent 38px, rgba(203,162,88,.06) 39px, rgba(203,162,88,.06) 40px)}
+  .pline{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;z-index:2}
+  .pstep{padding:30px 26px 30px 0;border-top:1px solid var(--line);position:relative}
+  .pstep::before{content:"";position:absolute;top:-1px;left:0;width:0;height:3px;background:var(--clay);transition:width 1s var(--ease)}
+  .pstep.in::before{width:60%}
+  .pstep .no{font-family:var(--display);font-weight:600;font-size:20px;color:var(--clay-l)}
+  .pstep h3{font-size:22px;color:var(--bone);margin:18px 0 10px}
+  .pstep p{font-size:13.5px;color:var(--t-mut)}
+  .oneday{margin-top:50px;text-align:center;font-family:var(--display);font-style:italic;font-size:clamp(22px,3vw,34px);color:var(--t-mut)}
+  .oneday b{color:var(--brass-l);font-style:normal;font-weight:600}
+
+  /* ============ WHY ============ */
+  .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line-l);border-radius:6px;overflow:hidden;background:var(--bone-2)}
+  .wcell{padding:40px;background:var(--bone);border-right:1px solid var(--line-l);border-bottom:1px solid var(--line-l);transition:.4s}
+  .wcell:nth-child(2n){border-right:none}
+  .wcell:nth-child(n+3){border-bottom:none}
+  .wcell:hover{background:var(--bone-2)}
+  .wcell .wn{font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--clay-d)}
+  .wcell h3{font-size:27px;margin:14px 0 10px;color:var(--t-ink)}
+  .wcell p{font-size:15px;color:var(--t-ink-mut)}
+
+  /* ============ PRICING ============ */
+  .pricing{background:var(--espresso)}
+  .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+  .pcard{background:var(--obsidian);border:1px solid var(--line);border-radius:8px;padding:42px}
+  .pcard .head{display:flex;align-items:flex-end;gap:8px;border-bottom:1px solid var(--line);padding-bottom:26px;margin-bottom:26px}
+  .pcard .head .big{font-family:var(--display);font-weight:600;font-size:96px;line-height:.78;color:var(--brass-l)}
+  .pcard .head .big sup{font-size:.3em;color:var(--clay-l);vertical-align:top}
+  .pcard .head .meta{padding-bottom:8px}
+  .pcard .head .meta .u{font-family:var(--mono);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--t-mut)}
+  .pcard .head .meta .a{font-family:var(--display);font-style:italic;color:var(--clay-l);font-size:17px;margin-top:4px}
+  .incl{display:grid;grid-template-columns:1fr 1fr;gap:13px 20px}
+  .incl li{list-style:none;font-size:14.5px;color:var(--t-mut);padding-left:26px;position:relative}
+  .incl li::before{content:"";position:absolute;left:0;top:8px;width:11px;height:11px;border:1.5px solid var(--clay);transform:rotate(45deg)}
+  .incl li::after{content:"";position:absolute;left:4px;top:9px;width:4px;height:4px;background:var(--brass);border-radius:50%}
+  .addon{margin-top:30px;padding-top:24px;border-top:1px solid var(--line);font-size:14.5px;color:var(--t-mut)}
+  .addon b{color:var(--bone)}
+  /* estimator */
+  .est{background:linear-gradient(160deg,#2b1f15,var(--obsidian));border:1px solid var(--brass);border-radius:8px;padding:42px;position:relative;overflow:hidden}
+  .est .glowdot{position:absolute;top:-40px;right:-40px;width:180px;height:180px;background:radial-gradient(circle,rgba(232,154,75,.3),transparent 70%);pointer-events:none}
+  .est h3{font-size:30px;color:var(--bone)}
+  .est .sub{font-size:14px;color:var(--t-mut);margin-top:4px}
+  .est .lab{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--t-dim);margin:28px 0 12px}
+  .sizes{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .sizes button{background:var(--espresso);border:1px solid var(--line);color:var(--t-mut);font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:14px 4px;border-radius:4px;cursor:pointer;transition:.25s;line-height:1.5}
+  .sizes button b{display:block;font-family:var(--display);font-size:17px;color:var(--bone);margin-top:3px}
+  .sizes button.on,.sizes button:hover{border-color:var(--clay);color:var(--clay-l);background:rgba(196,93,52,.08)}
+  .est input[type=number]{width:100%;background:var(--espresso);border:1px solid var(--line);color:var(--bone);font-family:var(--display);font-weight:600;font-size:24px;padding:14px 18px;border-radius:4px;outline:none}
+  .est input:focus{border-color:var(--brass)}
+  .est .out{margin-top:24px;display:flex;justify-content:space-between;align-items:baseline;border-top:1px dashed var(--line);padding-top:22px}
+  .est .out .lbl{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--t-mut)}
+  .est .out .amt{font-family:var(--display);font-weight:600;font-size:54px;line-height:.8;color:var(--brass-l)}
+  .est .note{font-size:11.5px;color:var(--t-dim);margin-top:16px;line-height:1.5}
+
+  /* ============ FLAKE COLORS ============ */
+  .colors{background:var(--obsidian)}
+  .cwrap{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+  .cpreview{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:4/3;border:1px solid var(--line);box-shadow:0 40px 80px -30px rgba(0,0,0,.7);background-size:340px 340px;transition:background-image .15s}
+  .cpreview .nm{position:absolute;left:0;bottom:0;z-index:3;background:rgba(23,17,13,.78);backdrop-filter:blur(6px);padding:14px 22px;border-top-right-radius:6px}
+  .cpreview .nm .t{font-family:var(--display);font-weight:600;font-size:26px;color:var(--bone);line-height:1}
+  .cpreview .nm .s{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-l);margin-top:5px}
+  .cinfo h2{font-size:clamp(32px,4.6vw,52px);margin-bottom:8px}
+  .cinfo h2 em{font-style:italic;color:var(--clay)}
+  .cinfo .desc{color:var(--t-mut);font-size:16px;margin:16px 0 26px;min-height:48px}
+  .swatches{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .sw{cursor:pointer;border-radius:6px;overflow:hidden;border:1px solid var(--line);transition:.25s;position:relative}
+  .sw .chip{height:78px;background-size:170px 170px}
+  .sw.on{border-color:var(--brass);box-shadow:0 0 0 1px var(--brass)}
+  .sw.on::after{content:"●";position:absolute;top:6px;right:8px;color:var(--brass-l);font-size:9px;z-index:3}
+  .sw .nm{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;padding:9px;text-align:center;color:var(--t-mut);background:var(--espresso)}
+  .sw.on .nm{color:var(--brass-l)}
+  .cmore{margin-top:22px;font-size:13px;color:var(--t-dim)}
+
+  /* ============ GALLERY ============ */
+  .gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:170px;gap:16px}
+  .gtile{position:relative;overflow:hidden;border-radius:6px;border:1px solid var(--line-l);background-size:300px 300px}
+  .gtile .tex{position:absolute;inset:0;background-size:300px 300px;transition:transform .9s var(--ease)}
+  .gtile:hover .tex{transform:scale(1.1)}
+  .gtile .tag{position:absolute;left:0;bottom:0;z-index:3;background:rgba(23,17,13,.82);color:var(--bone);font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:8px 13px;border-top-right-radius:5px}
+  .g-a{grid-column:span 3;grid-row:span 2}
+  .g-b{grid-column:span 3}
+  .g-c{grid-column:span 2}
+  .g-d{grid-column:span 2}
+  .g-e{grid-column:span 2;grid-row:span 1}
+  .g-f{grid-column:span 3}
+  .g-g{grid-column:span 3}
+
+  /* ============ REVIEWS ============ */
+  .reviews{background:var(--espresso)}
+  .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .rev{background:var(--obsidian);border:1px solid var(--line);border-radius:8px;padding:34px;position:relative}
+  .rev .qm{font-family:var(--display);font-size:80px;line-height:.5;color:var(--bark);position:absolute;top:30px;right:26px}
+  .stars{color:var(--ember);letter-spacing:4px;font-size:15px}
+  .rev p{font-family:var(--display);font-style:italic;font-weight:400;font-size:19px;line-height:1.45;color:var(--bone);margin:18px 0}
+  .rev .who{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--t-dim)}
+  .rev .who b{color:var(--clay-l);font-weight:500}
+
+  /* ============ REFERRAL ============ */
+  .referral{background:radial-gradient(120% 120% at 50% 0%, #d2693b, var(--clay) 45%, var(--clay-d));color:var(--bone);text-align:center;overflow:hidden}
+  .referral .eyebrow{color:rgba(242,234,217,.8)}
+  .referral h2{font-size:clamp(32px,5vw,58px);margin:18px 0 0;color:var(--bone)}
+  .referral .amt{font-family:var(--display);font-weight:700;font-size:clamp(120px,24vw,300px);line-height:.78;letter-spacing:-.04em;color:var(--bone);position:relative;margin:10px 0;text-shadow:0 0 80px rgba(255,220,170,.4)}
+  .referral .amt sup{font-size:.3em;vertical-align:top}
+  .referral p{max-width:540px;margin:0 auto 30px;font-size:17px;color:rgba(242,234,217,.92)}
+
+  /* ============ FAQ ============ */
+  .faqwrap{display:grid;grid-template-columns:.7fr 1.3fr;gap:50px;align-items:start}
+  .faq-list{display:grid;gap:0;border-top:1px solid var(--line-l)}
+  .qa{border-bottom:1px solid var(--line-l)}
+  .qa button{width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:26px 4px;font-family:var(--display);font-weight:600;font-size:21px;color:var(--t-ink);display:flex;justify-content:space-between;align-items:center;gap:24px;transition:.25s;letter-spacing:-.01em}
+  .qa button:hover{color:var(--clay-d)}
+  .qa .ic{flex:none;width:26px;height:26px;position:relative}
+  .qa .ic::before,.qa .ic::after{content:"";position:absolute;background:var(--clay);transition:.3s var(--ease)}
+  .qa .ic::before{top:12px;left:3px;right:3px;height:2px}
+  .qa .ic::after{left:12px;top:3px;bottom:3px;width:2px}
+  .qa.open .ic::after{transform:scaleY(0)}
+  .qa .ans{max-height:0;overflow:hidden;transition:max-height .35s var(--ease)}
+  .qa .ans p{padding:0 4px 28px;color:var(--t-ink-mut);font-size:15.5px;max-width:60ch}
+
+  /* ============ CONTACT ============ */
+  .contact{background:var(--obsidian)}
+  .cgrid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px}
+  .cinfo2 h3{font-size:30px;color:var(--bone);margin-bottom:28px}
+  .cline{display:flex;gap:16px;align-items:center;margin-bottom:22px}
+  .cline .ic{width:48px;height:48px;border-radius:4px;background:var(--espresso);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex:none}
+  .cline .ic svg{fill:var(--clay-l);width:21px;height:21px}
+  .cline .t{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--t-dim)}
+  .cline .v{font-family:var(--display);font-size:21px;color:var(--bone)}
+  .cline .v a:hover{color:var(--brass-l)}
+  .areas{margin-top:34px;padding-top:28px;border-top:1px solid var(--line)}
+  .areas .t{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--t-dim);margin-bottom:14px}
+  .pills{display:flex;flex-wrap:wrap;gap:8px}
+  .pills span{font-family:var(--mono);font-size:11.5px;color:var(--t-mut);border:1px solid var(--line);padding:6px 13px;border-radius:30px;transition:.25s}
+  .pills span:hover{border-color:var(--clay);color:var(--clay-l)}
+  form{background:var(--espresso);border:1px solid var(--line);border-radius:8px;padding:36px}
+  form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  form label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--t-dim);margin:18px 0 8px}
+  form input,form select,form textarea{width:100%;background:var(--obsidian);border:1px solid var(--line);color:var(--bone);font-family:var(--body);font-size:15px;padding:14px 16px;border-radius:4px;outline:none;transition:.25s}
+  form input::placeholder,form textarea::placeholder{color:var(--t-dim)}
+  form input:focus,form select:focus,form textarea:focus{border-color:var(--brass)}
+  form textarea{resize:vertical;min-height:96px}
+  form .btn{width:100%;justify-content:center;margin-top:26px;font-size:13px}
+  .formok{display:none;background:rgba(138,138,92,.16);border:1px solid var(--olive);color:#d6d6a8;border-radius:6px;padding:18px;margin-top:18px;font-size:14px}
+
+  /* ============ FOOTER ============ */
+  footer{background:var(--obsidian);border-top:1px solid var(--line);padding:70px 0 34px}
+  .fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;margin-bottom:50px}
+  footer .ftag{font-size:14px;color:var(--t-dim);margin-top:18px;max-width:34ch}
+  footer h4{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);margin-bottom:18px}
+  footer ul{list-style:none;display:grid;gap:11px}
+  footer ul a{font-size:14.5px;color:var(--t-mut)}
+  footer ul a:hover{color:var(--bone)}
+  .fbot{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--t-dim)}
+  .bigwm{font-family:var(--display);font-weight:600;font-size:clamp(60px,15vw,200px);line-height:.8;color:var(--espresso);text-align:center;letter-spacing:-.03em;padding:20px 0 0;user-select:none;pointer-events:none}
+
+  /* mobile call bar */
+  .callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:120;background:var(--obsidian);border-top:1px solid var(--brass);padding:11px 16px;gap:10px}
+  .callbar .btn{flex:1;justify-content:center}
+
+  @media(max-width:980px){
+    .navlinks{display:none}.burger{display:flex}
+    .hero-price{position:static;text-align:left;margin-top:40px}
+    .stats .wrap{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:none}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+    .svc.feat,.svc.half,.svc.third{grid-column:span 6}
+    .pline{grid-template-columns:1fr 1fr}
+    .why-grid{grid-template-columns:1fr}.wcell{border-right:none}
+    .pgrid{grid-template-columns:1fr}
+    .cwrap{grid-template-columns:1fr;gap:34px}
+    .gal{grid-template-columns:repeat(4,1fr)}.g-a{grid-column:span 4}.g-b,.g-f,.g-g{grid-column:span 4}.g-c,.g-d,.g-e{grid-column:span 2}
+    .rgrid{grid-template-columns:1fr}
+    .faqwrap{grid-template-columns:1fr;gap:24px}
+    .cgrid{grid-template-columns:1fr;gap:36px}
+    .fgrid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:600px){
+    .wrap{padding:0 20px}.pad{padding:80px 0}
+    .navphone span{display:none}
+    .svc.feat,.svc.half,.svc.third{grid-column:span 12}
+    .pline{grid-template-columns:1fr}
+    .incl{grid-template-columns:1fr}
+    .sizes{grid-template-columns:1fr 1fr}
+    .gal{grid-template-columns:1fr 1fr;grid-auto-rows:140px}.g-a,.g-b,.g-c,.g-d,.g-e,.g-f,.g-g{grid-column:span 2;grid-row:span 1}
+    form .row{grid-template-columns:1fr}
+    .fgrid{grid-template-columns:1fr 1fr}
+    .callbar{display:flex}body{padding-bottom:64px}
+    .pcard,.est,form{padding:28px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.15s!important}
+    .reveal{opacity:1;transform:none}
+    .hero h1 .ln i{transform:none}
+  }
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<!-- HEADER -->
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="mark"></span><span class="wm">Scottsdale Coatings<small>DESERT · SHOWROOM · FLOORS</small></span></a>
+    <nav class="navlinks">
+      <a href="#services">Services</a><a href="#process">Process</a><a href="#pricing">Pricing</a>
+      <a href="#colors">Colors</a><a href="#gallery">Work</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="navcta">
+      <a href="tel:+14805550147" class="navphone"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1l-2.2 2.2z"/></svg><span>(480) 555-0147</span></a>
+      <a href="#contact" class="btn solid">Get a Quote <span class="arr">→</span></a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile" id="mobile">
+  <a href="#services">Services</a><a href="#process">Process</a><a href="#pricing">Pricing</a>
+  <a href="#colors">Flake Colors</a><a href="#gallery">Our Work</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+</div>
+
+<!-- HERO -->
+<div id="top" class="hero">
+  <div class="sky-glow"></div>
+  <div class="floor-stage"><div class="slab coat" id="heroSlab"><div class="sheen"></div></div></div>
+  <div class="wrap hero-inner">
+    <div class="hero-eyebrow"><span class="eyebrow">Garage Floor Coatings · Scottsdale, AZ</span></div>
+    <h1>
+      <span class="ln"><i>Showroom</i></span>
+      <span class="ln"><i>floors,</i></span>
+      <span class="ln"><i><em>desert-proof.</em></i></span>
+    </h1>
+    <p class="hero-sub">Hand-finished flake floors installed in a single day. UV-stable polyaspartic engineered for 115° heat, hot tires, and monsoon dust — built for the way Scottsdale garages actually live.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn solid">Book a Free Quote <span class="arr">→</span></a>
+      <a href="#pricing" class="btn line">See Pricing</a>
+    </div>
+    <div class="hero-price">
+      <div class="lbl">All-Inclusive · From</div>
+      <div class="v"><sup>$</sup>8</div>
+      <div class="u">per square foot</div>
+    </div>
+  </div>
+  <div class="scrollcue">Scroll</div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="mtrack" id="mtrack">
+    <span>One-Day Install</span><span>UV-Stable Polyaspartic</span><span>Hot-Tire Resistant</span><span>15-Year Warranty</span><span>Transparent Pricing</span><span>Licensed &amp; Insured</span>
+    <span>One-Day Install</span><span>UV-Stable Polyaspartic</span><span>Hot-Tire Resistant</span><span>15-Year Warranty</span><span>Transparent Pricing</span><span>Licensed &amp; Insured</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stat reveal"><div class="n"><span data-count="1">1</span><small> DAY</small></div><div class="l">Start to park-on-it</div></div>
+    <div class="stat reveal d1"><div class="n"><span data-count="15">15</span><small> YR</small></div><div class="l">Written warranty</div></div>
+    <div class="stat reveal d2"><div class="n"><span data-count="180">180</span><small>+</small></div><div class="l">Flake color blends</div></div>
+    <div class="stat reveal d3"><div class="n"><span data-count="50">50</span><small> MI</small></div><div class="l">Valley service radius</div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services" class="light pad on-light">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="l"><span class="eyebrow">What We Coat</span><h2>One system,<br><em>every surface.</em></h2></div>
+      <p class="desc">The same tough flake system that transforms a garage works just as beautifully on patios, pool decks, and shop floors across the Valley.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc feat reveal"><div class="tex" data-flake="domino"></div><div class="shade"></div><div class="ix">01 / FLAGSHIP</div><div class="c"><h3>Garage Floors</h3><p>Our craft. A flawless, easy-clean flake floor that makes the whole garage feel finished — and finally worthy of the cars in it.</p></div></div>
+      <div class="svc half reveal d1"><div class="tex" data-flake="coyote"></div><div class="shade"></div><div class="ix">02</div><div class="c"><h3>Patios &amp; Pool Decks</h3><p>Cooler underfoot than bare concrete, slip-resistant when wet, sealed against sun and splash-out.</p></div></div>
+      <div class="svc third reveal"><div class="tex" data-flake="granite"></div><div class="shade"></div><div class="ix">03</div><div class="c"><h3>Interior &amp; Casita</h3><p>Basements, gyms, laundry rooms, casitas — a modern finish that wipes clean in seconds.</p></div></div>
+      <div class="svc third reveal d1"><div class="tex" data-flake="slate"></div><div class="shade"></div><div class="ix">04</div><div class="c"><h3>Commercial &amp; Shops</h3><p>Showrooms and warehouses that take a beating and still look sharp for customers.</p></div></div>
+      <div class="svc third reveal d2"><div class="tex" data-flake="sedona"></div><div class="shade"></div><div class="ix">05</div><div class="c"><h3>Custom Blends</h3><p>180+ flake colors and sizes. Match your build, your team colors, or your collection.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="process pad on-dark">
+  <div class="contour"></div>
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="l"><span class="eyebrow">The Process</span><h2>Bare concrete to<br><em>showroom floor.</em></h2></div>
+      <p class="desc">No shortcuts, no peeling. Every floor runs the same five steps that make a coating last for decades — not seasons.</p>
+    </div>
+    <div class="pline">
+      <div class="pstep reveal"><div class="no">01</div><h3>Repair</h3><p>Fill cracks, chips and pitting for a sound, even slab to build on.</p></div>
+      <div class="pstep reveal d1"><div class="no">02</div><h3>Diamond Grind</h3><p>Open the concrete's pores so the coating bonds permanently — the step cheap crews skip.</p></div>
+      <div class="pstep reveal d2"><div class="no">03</div><h3>Base Coat</h3><p>A fast-curing polyurea base goes down as the foundation of the system.</p></div>
+      <div class="pstep reveal d3"><div class="no">04</div><h3>Broadcast Flake</h3><p>Hand-thrown vinyl flake to full refusal in your chosen color and chip size.</p></div>
+      <div class="pstep reveal d4"><div class="no">05</div><h3>Top Coat</h3><p>UV-stable polyaspartic locks it in with a tough, glossy, easy-clean finish.</p></div>
+    </div>
+    <p class="oneday reveal">Start in the morning — <b>park on it in 24 hours.</b></p>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why" class="light pad">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="l"><span class="eyebrow">Why Scottsdale Coatings</span><h2>Built for<br><em>the desert.</em></h2></div>
+      <p class="desc">Plenty of crews can coat a floor. Here's why Valley homeowners trust us to do it right the first time.</p>
+    </div>
+    <div class="why-grid reveal">
+      <div class="wcell"><div class="wn">01</div><h3>UV-stable — won't yellow</h3><p>Polyaspartic is engineered for sunlight. Cheap epoxy ambers and chalks under the Arizona sun. Ours holds its color for the life of the warranty.</p></div>
+      <div class="wcell"><div class="wn">02</div><h3>Finished in one day</h3><p>Our system cures fast enough to grind, coat, flake and top-coat in a single day. Drop your car off in the morning, park on it tomorrow.</p></div>
+      <div class="wcell"><div class="wn">03</div><h3>Honest, flat pricing</h3><p>$8 a square foot, all-in — and we tell you before we ever come out. No pressure quotes, no surprise line items, no games.</p></div>
+      <div class="wcell"><div class="wn">04</div><h3>Licensed, insured, warrantied</h3><p>We show up on time, pick up the phone, and stand behind every floor with a 15-year warranty in writing.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="pricing pad on-dark">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="l"><span class="eyebrow">How Much Does It Cost?</span><h2>No games.<br><em>One flat price.</em></h2></div>
+      <p class="desc">Most companies dodge the question. We don't. Here's exactly what you'll pay — and a calculator to ballpark it right now.</p>
+    </div>
+    <div class="pgrid">
+      <div class="pcard reveal">
+        <div class="head">
+          <div class="big"><sup>$</sup>8</div>
+          <div class="meta"><div class="u">/ sq ft</div><div class="a">everything below, included</div></div>
+        </div>
+        <ul class="incl">
+          <li>Full surface prep</li><li>Crack &amp; chip repair</li>
+          <li>Professional diamond grind</li><li>Polyurea base coat</li>
+          <li>Decorative flake (your color)</li><li>Polyaspartic top coat</li>
+          <li>All materials</li><li>Labor &amp; haul-away cleanup</li>
+        </ul>
+        <div class="addon"><b>Don't want to move everything?</b> Add <b>$1 / sq ft</b> and our crew clears the garage before and resets it after — you don't lift a thing.</div>
+      </div>
+      <div class="est reveal d1">
+        <div class="glowdot"></div>
+        <h3>Instant Estimate</h3>
+        <div class="sub">Pick your garage or type the square footage.</div>
+        <div class="lab">Common sizes</div>
+        <div class="sizes" id="sizes">
+          <button data-sf="500">1-Car<b>~500</b></button>
+          <button data-sf="650" class="on">2-Car<b>~650</b></button>
+          <button data-sf="900">3-Car<b>~900</b></button>
+          <button data-sf="1200">4-Car<b>~1200</b></button>
+        </div>
+        <div class="lab">Square feet</div>
+        <input type="number" id="sf" value="650" min="50" max="20000">
+        <div class="out"><span class="lbl">Estimated total</span><span class="amt" id="amt">$5,200</span></div>
+        <div class="note">Ballpark at $8/sq ft. Final price confirmed on a free on-site measure. Add-ons (item moving, vertical step faces, metallic upgrades) quoted separately.</div>
+        <a href="#contact" class="btn solid" style="width:100%;justify-content:center;margin-top:20px">Lock In This Price <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLAKE COLORS -->
+<section id="colors" class="colors pad on-dark">
+  <div class="wrap">
+    <div class="cwrap">
+      <div class="cpreview coat vig reveal" id="preview"><div class="nm"><div class="t" id="pvName">Domino</div><div class="s">Most requested</div></div></div>
+      <div class="cinfo reveal d1">
+        <span class="eyebrow">Flake Colors</span>
+        <h2>Pick your <em>look.</em></h2>
+        <div class="desc" id="fdesc">A timeless black, white and gray blend. Clean, neutral, and hides everything — our most-requested floor.</div>
+        <div class="swatches" id="swatches"></div>
+        <div class="cmore">Want a custom blend or a specific chip size? We carry 180+ colors — just ask.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="light pad">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="l"><span class="eyebrow">Recent Work</span><h2>Floors around<br><em>the Valley.</em></h2></div>
+      <p class="desc">A look at the range — garages, patios, and shop floors finished by our crews.</p>
+    </div>
+    <!-- Replace these procedurally-textured tiles with real project photos before launch -->
+    <div class="gal reveal">
+      <div class="gtile g-a"><div class="tex" data-flake="domino"></div><span class="tag">3-Car Garage · Scottsdale</span></div>
+      <div class="gtile g-b"><div class="tex" data-flake="coyote"></div><span class="tag">Patio · Paradise Valley</span></div>
+      <div class="gtile g-c"><div class="tex" data-flake="slate"></div><span class="tag">Shop · Tempe</span></div>
+      <div class="gtile g-d"><div class="tex" data-flake="granite"></div><span class="tag">Garage · Gilbert</span></div>
+      <div class="gtile g-e"><div class="tex" data-flake="sedona"></div><span class="tag">Pool Deck · Fountain Hills</span></div>
+      <div class="gtile g-f"><div class="tex" data-flake="glacier"></div><span class="tag">Casita · Cave Creek</span></div>
+      <div class="gtile g-g"><div class="tex" data-flake="domino"></div><span class="tag">Garage · Chandler</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="reviews pad on-dark">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="l"><span class="eyebrow">★★★★★ Reviews</span><h2>Valley homeowners<br><em>love it.</em></h2></div>
+      <p class="desc">Real results, fast. Here's what neighbors say after their one-day transformation.</p>
+    </div>
+    <!-- PLACEHOLDER reviews — swap with verified Google reviews before launch -->
+    <div class="rgrid">
+      <div class="rev reveal"><div class="qm">"</div><div class="stars">★★★★★</div><p>Showed up on time, knocked out our 3-car garage in a day, and the floor looks incredible. They told us the price before they even came out.</p><div class="who">Sample Review · <b>Scottsdale</b></div></div>
+      <div class="rev reveal d1"><div class="qm">"</div><div class="stars">★★★★★</div><p>Full afternoon sun on the patio and we worried about fading. A year in and it still looks brand new. Worth every penny.</p><div class="who">Sample Review · <b>Paradise Valley</b></div></div>
+      <div class="rev reveal d2"><div class="qm">"</div><div class="stars">★★★★★</div><p>Cleanest, most professional crew we've hired. No pressure, no surprises, and the hot-tire pickup that ruined our last floor is gone for good.</p><div class="who">Sample Review · <b>Gilbert</b></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REFERRAL -->
+<section id="referral" class="pad referral">
+  <div class="wrap reveal">
+    <span class="eyebrow">Referral Program</span>
+    <h2>Know someone with an ugly garage?</h2>
+    <div class="amt"><sup>$</sup>200</div>
+    <p>Refer a friend, neighbor, or family member. When their floor is done, we send you <b>$200</b> — cash. No limit on how many you send our way.</p>
+    <a href="#contact" class="btn ink">Refer Someone <span class="arr">→</span></a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="light pad">
+  <div class="wrap faqwrap">
+    <div class="reveal"><span class="eyebrow">FAQs</span><h2 style="font-size:clamp(34px,5vw,56px);margin-top:16px;color:var(--t-ink)">Good<br><em style="font-style:italic;color:var(--clay)">questions.</em></h2><p class="desc" style="color:var(--t-ink-mut)">Don't see yours? Call or text — we actually pick up.</p></div>
+    <div class="faq-list reveal d1" id="faq-list">
+      <div class="qa"><button>How long does it actually take?<span class="ic"></span></button><div class="ans"><p>Most garages are a one-day job. We grind, coat, broadcast flake, and top-coat the same day. You can walk on it that evening and park a vehicle on it in about 24 hours.</p></div></div>
+      <div class="qa"><button>Will it yellow or fade in the Arizona sun?<span class="ic"></span></button><div class="ans"><p>No. Our top coat is a UV-stable polyaspartic, specifically chosen for sun resistance. Traditional epoxy ambers and chalks in our climate — which is exactly why we never use it as a top coat.</p></div></div>
+      <div class="qa"><button>Is it slippery?<span class="ic"></span></button><div class="ans"><p>The flake itself adds texture, and we can add a non-slip additive to the top coat for patios, pool decks, and anywhere you want extra grip when wet.</p></div></div>
+      <div class="qa"><button>Will hot tires lift the coating?<span class="ic"></span></button><div class="ans"><p>No. Hot-tire pickup is the classic failure of thin DIY epoxy kits. Because we diamond-grind the slab and use a polyurea/polyaspartic system, the coating bonds into the concrete and won't peel.</p></div></div>
+      <div class="qa"><button>How much does it cost?<span class="ic"></span></button><div class="ans"><p>$8 per square foot, all-inclusive — prep, repair, grinding, base, flake, top coat, materials, labor and cleanup. A typical 2-car garage runs about $5,000–$5,600. Add $1/sq ft if you'd like us to move and reset your belongings.</p></div></div>
+      <div class="qa"><button>Do I have to empty my garage first?<span class="ic"></span></button><div class="ans"><p>If you can clear it the day before, great — you keep that cost. If not, add $1/sq ft and our crew handles moving everything out and putting it back.</p></div></div>
+      <div class="qa"><button>How long will it last?<span class="ic"></span></button><div class="ans"><p>Decades when installed correctly — and we back it with a 15-year warranty. The grind-and-bond process is what separates a permanent floor from one that peels in a couple of seasons.</p></div></div>
+      <div class="qa"><button>What areas do you serve?<span class="ic"></span></button><div class="ans"><p>Scottsdale, Paradise Valley, Phoenix, Fountain Hills, Cave Creek, Carefree, Tempe, Mesa, Chandler and Gilbert — roughly a 50-mile radius. Not sure if you're in range? Just call.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact pad on-dark">
+  <div class="wrap">
+    <div class="shead reveal" style="margin-bottom:50px">
+      <div class="l"><span class="eyebrow">Get a Quote</span><h2>Let's coat<br><em>your floor.</em></h2></div>
+      <p class="desc">Fill this out or call — we answer the phone and can usually measure within a day or two.</p>
+    </div>
+    <div class="cgrid">
+      <div class="cinfo2 reveal">
+        <h3>Talk to a human</h3>
+        <div class="cline"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1l-2.2 2.2z"/></svg></div><div><div class="t">Call or Text</div><div class="v"><a href="tel:+14805550147">(480) 555-0147</a></div></div></div>
+        <div class="cline"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7 8-5H4l8 5zm0 2.3L4 9v9h16V9l-8 5.3z"/></svg></div><div><div class="t">Email</div><div class="v"><a href="mailto:hello@scottsdalecoatings.com">hello@scottsdalecoatings.com</a></div></div></div>
+        <div class="cline"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></div><div><div class="t">Hours</div><div class="v">Mon–Sat · 7a–6p</div></div></div>
+        <div class="areas">
+          <div class="t">Proudly serving</div>
+          <div class="pills"><span>Scottsdale</span><span>Paradise Valley</span><span>Phoenix</span><span>Fountain Hills</span><span>Cave Creek</span><span>Carefree</span><span>Tempe</span><span>Mesa</span><span>Chandler</span><span>Gilbert</span></div>
+        </div>
+      </div>
+      <form id="qform" class="reveal d1" onsubmit="return submitForm(event)">
+        <div class="row">
+          <div><label>Name</label><input required name="name" placeholder="Your name"></div>
+          <div><label>Phone</label><input required name="phone" type="tel" placeholder="(480) 000-0000"></div>
+        </div>
+        <label>Email</label><input name="email" type="email" placeholder="you@email.com">
+        <div class="row">
+          <div><label>Interested in</label><select name="service"><option>Garage Floor</option><option>Patio / Pool Deck</option><option>Interior / Casita</option><option>Commercial / Shop</option><option>Not sure yet</option></select></div>
+          <div><label>Approx. sq ft</label><input name="sqft" type="number" placeholder="e.g. 650"></div>
+        </div>
+        <label>Anything else?</label><textarea name="msg" placeholder="Garage size, condition, color you like, timeline…"></textarea>
+        <button type="submit" class="btn solid">Request My Free Quote <span class="arr">→</span></button>
+        <div class="formok" id="formok">✓ Got it — we'll call you shortly. For the fastest response, call or text (480) 555-0147.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a href="#top" class="brand"><span class="mark"></span><span class="wm" style="color:var(--bone)">Scottsdale Coatings</span></a>
+        <p class="ftag">Premium one-day garage, patio and concrete coatings for Scottsdale and the East Valley. UV-stable polyaspartic flake systems, installed right the first time.</p>
+      </div>
+      <div><h4>Services</h4><ul><li><a href="#services">Garage Floors</a></li><li><a href="#services">Patios &amp; Pool Decks</a></li><li><a href="#services">Interior &amp; Casita</a></li><li><a href="#services">Commercial &amp; Shops</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#process">Our Process</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#colors">Flake Colors</a></li><li><a href="#referral">Referral Program</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+14805550147">(480) 555-0147</a></li><li><a href="mailto:hello@scottsdalecoatings.com">hello@scottsdalecoatings.com</a></li><li>Mon–Sat · 7a–6p</li><li>Scottsdale, AZ</li></ul></div>
+    </div>
+    <div class="bigwm">SCOTTSDALE</div>
+    <div class="fbot">
+      <span>© 2026 Scottsdale Coatings · Licensed &amp; Insured · ROC #000000</span>
+      <span>Serving the Greater Phoenix Valley</span>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a href="tel:+14805550147" class="btn line" style="border-color:var(--brass);color:var(--brass-l)">Call Now</a>
+  <a href="#contact" class="btn solid">Free Quote</a>
+</div>
+
+<script>
+  const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+  const rnd=(a,b)=>a+Math.random()*(b-a);
+
+  /* ---- procedural flake-floor texture (angular vinyl chips over mottled resin) ---- */
+  function flakeURL(base, base2, chips, size, density){
+    size=size||340; density=density|| (size*size/230);
+    let r='';
+    for(let i=0;i<density;i++){
+      const x=rnd(0,size).toFixed(1), y=rnd(0,size).toFixed(1);
+      const w=rnd(2.5,8).toFixed(1), h=rnd(2.5,8).toFixed(1);
+      const rot=rnd(0,360).toFixed(0);
+      const c=chips[(Math.random()*chips.length)|0];
+      const o=rnd(.5,1).toFixed(2);
+      r+=`<rect x='${x}' y='${y}' width='${w}' height='${h}' rx='1.2' fill='${c}' opacity='${o}' transform='rotate(${rot} ${x} ${y})'/>`;
+    }
+    const svg=`<svg xmlns='http://www.w3.org/2000/svg' width='${size}' height='${size}'>`+
+      `<defs><radialGradient id='g' cx='34%' cy='24%' r='95%'><stop offset='0%' stop-color='${base2}'/><stop offset='100%' stop-color='${base}'/></radialGradient>`+
+      `<filter id='m'><feTurbulence type='fractalNoise' baseFrequency='0.014' numOctaves='2' seed='7'/><feColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .06 0'/></filter></defs>`+
+      `<rect width='100%' height='100%' fill='url(#g)'/><rect width='100%' height='100%' filter='url(#m)'/>${r}</svg>`;
+    return `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
+  }
+
+  const BLENDS={
+    domino:{b:'#6f7276',b2:'#8f9296',c:['#15171c','#15171c','#f1efe9','#c4c7cc','#3a3d43']},
+    coyote:{b:'#9a7c5d',b2:'#b89671',c:['#2f2014','#2f2014','#efe4d2','#caa779','#8a5a32']},
+    granite:{b:'#9aa0a8',b2:'#bcc1c7',c:['#2a2d34','#2a2d34','#ffffff','#c2c7cf','#5a6068']},
+    sedona:{b:'#9c5b3f',b2:'#bd7350',c:['#3a1f14','#3a1f14','#f0ddcf','#cf9070','#7a3a22']},
+    glacier:{b:'#c2c7cd',b2:'#dee2e6',c:['#7a8088','#7a8088','#ffffff','#aab0b8','#5e646c']},
+    slate:{b:'#586470',b2:'#74808d',c:['#15171c','#15171c','#d7dde4','#9aa6b2','#39424c']}
+  };
+
+  const cache={};
+  function flakeFor(name,size,density){
+    const k=name+'|'+(size||'')+'|'+(density||'');
+    if(cache[k]) return cache[k];
+    const B=BLENDS[name]||BLENDS.domino;
+    return cache[k]=flakeURL(B.b,B.b2,B.c,size,density);
+  }
+
+  // paint all texture elements
+  $$('[data-flake]').forEach(el=>{ el.style.backgroundImage=flakeFor(el.dataset.flake); });
+  // hero slab — larger tile for less repetition
+  $('#heroSlab').style.backgroundImage=flakeFor('domino',560);
+
+  /* ---- header scroll ---- */
+  const hdr=$('#hdr');
+  const onScroll=()=>{ hdr.classList.toggle('scrolled', window.scrollY>40); };
+  onScroll(); addEventListener('scroll',onScroll,{passive:true});
+
+  /* ---- mobile nav ---- */
+  const mob=$('#mobile'), burger=$('#burger');
+  burger.addEventListener('click',()=>mob.classList.toggle('open'));
+  $$('#mobile a').forEach(a=>a.addEventListener('click',()=>mob.classList.remove('open')));
+
+  /* ---- reveal + stagger + process bars + count-up ---- */
+  const io=('IntersectionObserver' in window)?new IntersectionObserver((es)=>{
+    es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); if(e.target.dataset.count!==undefined) countUp(e.target); io.unobserve(e.target);} });
+  },{threshold:.18,rootMargin:'0px 0px -8% 0px'}):null;
+  if(io){ $$('.reveal,.pstep,[data-count]').forEach(el=>io.observe(el)); }
+  else { $$('.reveal,.pstep').forEach(el=>el.classList.add('in')); $$('[data-count]').forEach(countUp); }
+
+  function countUp(el){
+    const target=+el.dataset.count; let cur=0; const dur=1100, t0=performance.now();
+    const step=(t)=>{ const p=Math.min(1,(t-t0)/dur); cur=Math.round(target*(1-Math.pow(1-p,3))); el.textContent=cur; if(p<1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  }
+
+  /* ---- estimator ---- */
+  const sf=$('#sf'), amt=$('#amt'), sizeBtns=$$('#sizes button');
+  const calc=()=>{ const v=Math.max(0,+sf.value||0); amt.textContent='$'+(v*8).toLocaleString('en-US'); };
+  sf.addEventListener('input',()=>{ sizeBtns.forEach(b=>b.classList.remove('on')); calc(); });
+  sizeBtns.forEach(b=>b.addEventListener('click',()=>{ sizeBtns.forEach(x=>x.classList.remove('on')); b.classList.add('on'); sf.value=b.dataset.sf; calc(); }));
+  calc();
+
+  /* ---- flake color picker ---- */
+  const COLORS=[
+    {k:'domino', n:'Domino',  tag:'Most requested', d:'A timeless black, white and gray blend. Clean, neutral, and hides everything — our most-requested floor.'},
+    {k:'coyote', n:'Coyote',  tag:'Southwestern',  d:'Warm tan, brown and black. An earthy, desert-native look that pairs perfectly with Sonoran landscaping.'},
+    {k:'granite',n:'Granite', tag:'High contrast', d:'Cool charcoal and white over a steel-gray base. Modern, sharp, and endlessly versatile.'},
+    {k:'sedona', n:'Sedona',  tag:'Statement',     d:'Rust, clay and cream inspired by red-rock country. A bold, warm floor that makes a statement.'},
+    {k:'glacier',n:'Glacier', tag:'Bright & airy', d:'Crisp whites and light grays over a pale base. Brightens a space and shows off the gloss.'},
+    {k:'slate',  n:'Slate',   tag:'Refined',       d:'Deep blue-gray with charcoal and silver flake. Sophisticated, with just a little moody depth.'}
+  ];
+  const swWrap=$('#swatches'), preview=$('#preview'), pvName=$('#pvName'), fdesc=$('#fdesc');
+  COLORS.forEach((c,i)=>{
+    const el=document.createElement('div');
+    el.className='sw'+(i===0?' on':'');
+    el.innerHTML=`<div class="chip coat"></div><div class="nm">${c.n}</div>`;
+    el.querySelector('.chip').style.backgroundImage=flakeFor(c.k,170);
+    el.addEventListener('click',()=>{
+      $$('.sw').forEach(s=>s.classList.remove('on')); el.classList.add('on');
+      preview.style.backgroundImage=flakeFor(c.k); pvName.textContent=c.n; fdesc.textContent=c.d;
+      preview.querySelector('.s').textContent=c.tag;
+    });
+    swWrap.appendChild(el);
+  });
+  preview.style.backgroundImage=flakeFor('domino');
+
+  /* ---- FAQ ---- */
+  $$('#faq-list .qa').forEach(qa=>{
+    const btn=qa.querySelector('button'), ans=qa.querySelector('.ans');
+    btn.addEventListener('click',()=>{
+      const open=qa.classList.contains('open');
+      $$('#faq-list .qa').forEach(o=>{o.classList.remove('open');o.querySelector('.ans').style.maxHeight=null;});
+      if(!open){ qa.classList.add('open'); ans.style.maxHeight=ans.scrollHeight+'px'; }
+    });
+  });
+
+  /* ---- form (front-end only — wire to Formspree / GoHighLevel before launch) ---- */
+  function submitForm(e){ e.preventDefault(); $('#formok').style.display='block'; e.target.querySelector('button').innerHTML='✓ Request Sent'; return false; }
+  window.submitForm=submitForm;
+</script>
+</body>
+</html>
