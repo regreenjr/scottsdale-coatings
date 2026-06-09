@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.scottsdalecoatings.com" }],
+      "destination": "https://scottsdalecoatings.com/:path*",
+      "permanent": true
+    }
+  ]
+}
